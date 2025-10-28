@@ -1,0 +1,68 @@
+# Résumé — Chenxi Liu
+
+## Education
+- **Columbia University**, New York, NY — *M.S. in Biostatistics (Public Health Data Science)*, Sept 2025 – May 2027 (expected)  
+  *Relevant coursework:* Data Science with R, Biostatistical Methods, Probability, Epidemiology
+
+- **Georgia State University (GSU)**, Atlanta, GA — *B.S. in Biological Science, minor in Mathematics*, Aug 2023 – May 2025  
+  GPA 3.94 • President’s List (Fall 2024) • Dean’s List (Spring 2024)  
+  *Selected courses:* Principles of Computer Science (A+), Discrete Mathematics (A), Biostatistics (A+), Mathematical Statistics I–II (A+), Linear Algebra (A+), Genetics, Molecular Cell Biology
+
+- **Southwest Jiaotong University (SWJTU)**, Chengdu, China — *B.Eng. in Bioengineering*, Sept 2021 – Jun 2023
+
+---
+
+## Research Experience
+**Undergraduate Research Program — University College London (advisor: Dr. Hynek Pikhart)**, Aug 2024 – Oct 2024  
+*Project:* Diabetes and health/socioeconomic indicators (BRFSS 2015; n = 253,680; 21 variables)  
+- Built multiple logistic regression models; ran Pearson correlation & chi-square tests in R  
+- Found strong associations with high blood pressure, high cholesterol, and BMI; weaker effect of smoking  
+- Presented findings at **BSH 2024**
+
+**Research Assistant — Molecular Basis of Disease Lab (GSU; advisor: Dr. Jianliang Xu)**, Oct 2023 – Present  
+*Project:* Molecular Basis of Disease (HIV-1)  
+- Isolated PBMCs from immunized alpacas; extracted RNA → cDNA  
+- Constructed **nanobody (VHH) libraries** via phage display; ELISA for binding; BLI for kinetics  
+- Screened neutralization across HIV-1 strain panel; identified broad/potent candidates
+
+*Project:* Broadly Neutralizing Human–Alpaca **Bispecific** Antibodies Against HIV-1  
+- Repeated immunizations over 271 days to induce HCAbs; phage display selection  
+- Engineered bispecifics combining camelid + human antibodies targeting two viral sites to enhance resistance to escape
+
+---
+
+## Course Projects & Labs
+- **Computer Science Project (Spring 2024):** Python + Biopython DNA→protein analyzer (transcription/translation; start/stop codon validation)  
+- **Biostatistics Project (Fall 2024):**  
+  1) Blind taste test (two chocolates) — *t-test*  
+  2) Visual acuity across diabetic retinopathy stages — *ANOVA + post-hoc*  
+  3) Eye melanoma tumor size ~ age — multiple regression models  
+  *End-to-end workflow in R: cleaning → modeling → interpretation → visualization*  
+- **Molecular Biology Lab (Spring 2024):** PCR for GMO detection & COVID-19 testing  
+- **Microbiology Lab (Summer 2023):** Cell culture; protein extraction; **SDS-PAGE** & **Western blot**
+
+---
+
+## Internship Experience
+**HIV-1 Nanobody Research (May 2024 – Aug 2024)**  
+- RNA extraction from alpaca serum; reverse transcription to cDNA  
+- ELISA screening against HIV-1 Env; PCR + phage display; cloning & transformation support  
+- R-based data cleaning, statistical analysis, and visualization for ELISA/BLI
+
+---
+
+## Skills
+**Programming & Analytics:** R, Python, C, SAS, SPSS, MATLAB  
+**Statistics:** t-tests/ANOVA, regression (GLMs), logistic regression, chi-square, visualization  
+**Lab:** DNA extraction/purification, PCR, SDS-PAGE, Western blot, spectrophotometry
+
+---
+
+## Contact
+- ✉️ [liuchenxi1125@gmail.com](mailto:liuchenxi1125@gmail.com)  
+- 💻 GitHub: <https://github.com/Chenxi1125-xixi>  
+- 🔗 LinkedIn: <https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/>
+
+---
+
+*Last updated:* `r format(Sys.Date(), '%Y-%m-%d')`  

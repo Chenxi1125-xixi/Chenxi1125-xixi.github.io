@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>resume.knit</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Chenxi Liu</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="resume.html">Résumé</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:liuchenxi1125@gmail.com">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/YOUR_GH_NAME">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="résumé-chenxi-liu" class="section level1">
+<h1>Résumé — Chenxi Liu</h1>
+<div id="education" class="section level2">
+<h2>Education</h2>
+<ul>
+<li><p><strong>Columbia University</strong>, New York, NY — <em>M.S. in
+Biostatistics (Public Health Data Science)</em>, Sept 2025 – May 2027
+(expected)<br />
+<em>Relevant coursework:</em> Data Science with R, Biostatistical
+Methods, Probability, Epidemiology</p></li>
+<li><p><strong>Georgia State University (GSU)</strong>, Atlanta, GA —
+<em>B.S. in Biological Science, minor in Mathematics</em>, Aug 2023 –
+May 2025<br />
+GPA 3.94 • President’s List (Fall 2024) • Dean’s List (Spring
+2024)<br />
+<em>Selected courses:</em> Principles of Computer Science (A+), Discrete
+Mathematics (A), Biostatistics (A+), Mathematical Statistics I–II (A+),
+Linear Algebra (A+), Genetics, Molecular Cell Biology</p></li>
+<li><p><strong>Southwest Jiaotong University (SWJTU)</strong>, Chengdu,
+China — <em>B.Eng. in Bioengineering</em>, Sept 2021 – Jun 2023</p></li>
+</ul>
+<hr />
+</div>
+<div id="research-experience" class="section level2">
+<h2>Research Experience</h2>
+<p><strong>Undergraduate Research Program — University College London
+(advisor: Dr. Hynek Pikhart)</strong>, Aug 2024 – Oct 2024<br />
+<em>Project:</em> Diabetes and health/socioeconomic indicators (BRFSS
+2015; n = 253,680; 21 variables)<br />
+- Built multiple logistic regression models; ran Pearson correlation
+&amp; chi-square tests in R<br />
+- Found strong associations with high blood pressure, high cholesterol,
+and BMI; weaker effect of smoking<br />
+- Presented findings at <strong>BSH 2024</strong></p>
+<p><strong>Research Assistant — Molecular Basis of Disease Lab (GSU;
+advisor: Dr. Jianliang Xu)</strong>, Oct 2023 – Present<br />
+<em>Project:</em> Molecular Basis of Disease (HIV-1)<br />
+- Isolated PBMCs from immunized alpacas; extracted RNA → cDNA<br />
+- Constructed <strong>nanobody (VHH) libraries</strong> via phage
+display; ELISA for binding; BLI for kinetics<br />
+- Screened neutralization across HIV-1 strain panel; identified
+broad/potent candidates</p>
+<p><em>Project:</em> Broadly Neutralizing Human–Alpaca
+<strong>Bispecific</strong> Antibodies Against HIV-1<br />
+- Repeated immunizations over 271 days to induce HCAbs; phage display
+selection<br />
+- Engineered bispecifics combining camelid + human antibodies targeting
+two viral sites to enhance resistance to escape</p>
+<hr />
+</div>
+<div id="course-projects-labs" class="section level2">
+<h2>Course Projects &amp; Labs</h2>
+<ul>
+<li><strong>Computer Science Project (Spring 2024):</strong> Python +
+Biopython DNA→protein analyzer (transcription/translation; start/stop
+codon validation)<br />
+</li>
+<li><strong>Biostatistics Project (Fall 2024):</strong>
+<ol style="list-style-type: decimal">
+<li>Blind taste test (two chocolates) — <em>t-test</em><br />
+</li>
+<li>Visual acuity across diabetic retinopathy stages — <em>ANOVA +
+post-hoc</em><br />
+</li>
+<li>Eye melanoma tumor size ~ age — multiple regression models<br />
+<em>End-to-end workflow in R: cleaning → modeling → interpretation →
+visualization</em><br />
+</li>
+</ol></li>
+<li><strong>Molecular Biology Lab (Spring 2024):</strong> PCR for GMO
+detection &amp; COVID-19 testing<br />
+</li>
+<li><strong>Microbiology Lab (Summer 2023):</strong> Cell culture;
+protein extraction; <strong>SDS-PAGE</strong> &amp; <strong>Western
+blot</strong></li>
+</ul>
+<hr />
+</div>
+<div id="internship-experience" class="section level2">
+<h2>Internship Experience</h2>
+<p><strong>HIV-1 Nanobody Research (May 2024 – Aug 2024)</strong><br />
+- RNA extraction from alpaca serum; reverse transcription to cDNA<br />
+- ELISA screening against HIV-1 Env; PCR + phage display; cloning &amp;
+transformation support<br />
+- R-based data cleaning, statistical analysis, and visualization for
+ELISA/BLI</p>
+<hr />
+</div>
+<div id="skills" class="section level2">
+<h2>Skills</h2>
+<p><strong>Programming &amp; Analytics:</strong> R, Python, C, SAS,
+SPSS, MATLAB<br />
+<strong>Statistics:</strong> t-tests/ANOVA, regression (GLMs), logistic
+regression, chi-square, visualization<br />
+<strong>Lab:</strong> DNA extraction/purification, PCR, SDS-PAGE,
+Western blot, spectrophotometry</p>
+<hr />
+</div>
+<div id="contact" class="section level2">
+<h2>Contact</h2>
+<ul>
+<li>✉️ <a
+href="mailto:liuchenxi1125@gmail.com">liuchenxi1125@gmail.com</a><br />
+</li>
+<li>💻 GitHub: <a href="https://github.com/Chenxi1125-xixi"
+class="uri">https://github.com/Chenxi1125-xixi</a><br />
+</li>
+<li>🔗 LinkedIn: <a
+href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/"
+class="uri">https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/</a></li>
+</ul>
+<hr />
+<p><em>Last updated:</em> 2025-10-28</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

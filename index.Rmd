@@ -1,0 +1,33 @@
+
+# Welcome!
+
+Hi, I’m **Chenxi Liu** — a Biostatistics MS candidate at Columbia University, passionate about public health data science, statistical modeling, and reproducible workflows.  
+
+This site highlights my academic background, research projects, and professional experiences.
+
+## Research Interests
+- Biostatistical methods for public health data  
+- Infectious disease modeling and nanobody research  
+- R programming, data visualization, and reproducible reports  
+
+---
+
+### Recent Projects
+**HIV-1 Nanobody Library Construction**  
+Developed large-scale alpaca-derived nanobody libraries; conducted ELISA and BLI assays; analyzed results in R.
+
+**BRFSS Diabetes Risk Modeling**  
+Used multiple logistic regression to identify behavioral and medical predictors of diabetes in a dataset of 250k participants.
+
+---
+*Last updated: `r Sys.Date()`*
+# Welcome!
+
+Hi, I’m Chenxi Liu — a Biostatistics MS candidate passionate about public health data science, statistical modeling, and reproducible workflows.  
+
+This site highlights my academic background, research projects, and professional experiences.
+
+## Quick Links
+- [GitHub](https://github.com/Chenxi1125-xixi)
+- [Email](mailto:liuchenxi1125@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/)

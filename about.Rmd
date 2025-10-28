@@ -1,0 +1,19 @@
+# About Me
+
+I’m **Chenxi Liu**, currently pursuing an MS in Biostatistics (Public Health Data Science track) at Columbia University.  
+I completed my BS in Biological Science with a Mathematics minor at Georgia State University, and previously studied Bioengineering at Southwest Jiaotong University.
+
+My background combines biology, statistics, and computer science — allowing me to apply quantitative reasoning to biomedical and public health problems.
+
+---
+
+## Outside of Work
+- 📷 Enjoy photography, travel, and exploring NYC’s food and art scenes  
+- 🧩 Love organizing data, designing clean visuals, and learning new R packages  
+- 🐱 Proud cat owner  
+
+---
+
+*Learn more about my academic experience on the [Résumé](resume.html) page.*
+
+
