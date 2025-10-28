@@ -1,0 +1,22 @@
+name: "Chenxi Liu Website"
+output_dir: "."
+navbar:
+  title: "Chenxi Liu"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Résumé"
+      href: resume.html
+    - text: "About"
+      href: about.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:liuchenxi1125@gmail.com
+    - icon: fa-github fa-lg
+      href: https://github.com/YOUR_GH_NAME
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/
+output:
+  html_document:
+    theme: cerulean
+    toc: false
