@@ -1,0 +1,109 @@
+---
+title: "My Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+    social: menu
+    source_code: embed
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(plotly)
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(p8105.datasets)
+```
+
+```{r}
+data("ny_noaa")
+
+noaa <- ny_noaa |>
+  clean_names() |>
+  mutate(date = as.Date(date),
+         year = year(date),
+         month = month(date, label = TRUE),
+         tmax_c = as.numeric(tmax)/10,
+         tmin_c = as.numeric(tmin)/10,
+         prcp_mm = as.numeric(prcp)) |>
+  drop_na(date)
+top_station <- noaa |> count(id, sort = TRUE) |> slice(1) |> pull(id)
+noaa_s <- noaa |> filter(id == top_station) |> slice_sample(n = 40000)
+```
+Sidebar {.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+dateRangeInput(
+  "daterng", "Date range:",
+  start = max(min(noaa_s$date), max(noaa_s$date) - 365*2),
+  end   = max(noaa_s$date),
+  min   = min(noaa_s$date),
+  max   = max(noaa_s$date)
+)
+checkboxInput("smooth", "Add LOESS trend", TRUE)
+```
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+renderPlotly({
+  df <- noaa_s |>
+    filter(date >= input$daterng[1], date <= input$daterng[2]) |>
+    select(date, tmax_c, tmin_c) |>
+    pivot_longer(c(tmax_c, tmin_c), names_to = "series", values_to = "value") |>
+    drop_na(value)
+
+  p <- ggplot(df, aes(date, value, color = series)) +
+    geom_line(alpha = .7) +
+    labs(x = NULL, y = "°C", color = NULL)
+  if (isTRUE(input$smooth)) p <- p + geom_smooth(se = FALSE, span = .2, method = "loess")
+  ggplotly(p, tooltip = c("x","y","color")) |> layout(legend = list(orientation = "h"))
+})
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+renderPlotly({
+  df <- noaa_s |>
+    filter(date >= input$daterng[1], date <= input$daterng[2]) |>
+    drop_na(tmax_c, tmin_c)
+
+  ggplotly(
+    ggplot(df, aes(tmin_c, tmax_c)) +
+      geom_point(alpha = .35) +
+      labs(x = "Tmin (°C)", y = "Tmax (°C)")
+  )
+})
+```
+
+### Chart C
+
+```{r}
+renderPlotly({
+  df <- noaa_s |>
+    filter(date >= input$daterng[1], date <= input$daterng[2]) |>
+    mutate(wet_day = !is.na(prcp_mm) & prcp_mm > 0) |>
+    count(year, month, wet_day, name = "n") |>
+    filter(wet_day) |>
+    group_by(month) |>
+    summarise(wet_days = sum(n), .groups = "drop")
+
+  ggplotly(
+    ggplot(df, aes(month, wet_days)) +
+      geom_col() +
+      labs(x = NULL, y = "Wet days")
+  )
+})
+```
+
