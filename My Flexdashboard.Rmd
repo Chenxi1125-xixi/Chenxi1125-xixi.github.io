@@ -25,7 +25,7 @@ noaa <- ny_noaa |>
   clean_names() |>
   mutate(date = as.Date(date),
          year = year(date),
-         month = month(date, label = TRUE),
+         month = month(date, label = TRUE, abbr = TRUE, locale = "C"),
          tmax_c = as.numeric(tmax)/10,
          tmin_c = as.numeric(tmin)/10,
          prcp_mm = as.numeric(prcp)) |>
@@ -80,11 +80,16 @@ renderPlotly({
     drop_na(tmax_c, tmin_c)
 
   ggplotly(
-    ggplot(df, aes(tmin_c, tmax_c)) +
-      geom_point(alpha = .35) +
-      labs(x = "Tmin (°C)", y = "Tmax (°C)")
+    ggplot(df, aes(x = month, y = tmax_c)) +
+      geom_boxplot(fill = "#3182bd", color = "white", alpha = 0.7, outlier.alpha = 0.3) +
+      labs(
+        x = "Month",
+        y = "Tmax (°C)",
+        title = "Monthly Distribution of Maximum Temperature"
+      )
   )
 })
+
 ```
 
 ### Chart C
