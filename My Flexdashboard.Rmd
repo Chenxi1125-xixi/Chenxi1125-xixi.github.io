@@ -16,6 +16,7 @@ library(tidyverse)
 library(lubridate)
 library(janitor)
 library(p8105.datasets)
+library(shiny)
 ```
 
 ```{r}
